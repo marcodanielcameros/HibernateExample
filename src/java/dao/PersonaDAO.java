@@ -47,6 +47,15 @@ public class PersonaDAO {
          */
         return listaDePersonas;
     }
+        
+    public  Persona getPersonaByPhone(String telefono){
+        
+         return (Persona)session.createCriteria(Persona.class)
+                .add(Restrictions.eq("Telefono", telefono)).uniqueResult();
+         
+         
+                
+    }
     
     public boolean updateById(int id,Persona persona){
         /**

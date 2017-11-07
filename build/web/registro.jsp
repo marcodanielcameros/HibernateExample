@@ -35,7 +35,7 @@
                     </div>
                 </div> 
                 <div class="main-login main-center">
-                    <form class="form-horizontal" method="post" action="Login">
+                    <form class="form-horizontal" method="post" action="Test">
 
                         <div class="form-group">
                             <label for="name" class="cols-sm-2 control-label">Nombre</label>
@@ -43,7 +43,27 @@
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
                                     <input type="text" class="form-control" name="nombre" id="name"  placeholder="Escribe tu nombre"/>
-                                    <input type="hidden" class="form-control" name="forma" value="login"/>
+                                    <input type="hidden" class="form-control" name="forma" value="registro"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Apellido Paterno</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="paterno" id="paterno"  placeholder="Escribe tu  Apellido Paterno"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Apellido Materno</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                    <input type="text" class="form-control" name="materno" id="materno"  placeholder="Escribe tu Apellido Materno"/>
                                 </div>
                             </div>
                         </div>
@@ -53,7 +73,24 @@
                             <div class="cols-sm-10">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
-                                    <input type="text" class="form-control" name="telefono" id="password"  placeholder="Escribe tu Telefono"/>
+                                    <input type="text" class="form-control" name="telefono" id="telefono"  placeholder="Escribe tu Telefono"/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirm" class="cols-sm-2 control-label">Tipo Persona</label>
+                            <div class="cols-sm-10">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                    <select class="form-control" name="tipoPersona" />
+                                    <option value="">Selecciona una opción</option>
+                                    <option value="1">Obrero</option>
+                                    <option value="2">Godin</option>
+                                    <option value="3">Burges</option>
+                                    <option value="4">Estudiambre</option>
+                                    <option value="5">Chairoman</option>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -63,7 +100,7 @@
                             <input class="btn btn-primary btn-lg btn-block login-button" type="submit" name="Envia">
                         </div>
                         <div class="login-register">
-                            <a href="registro.jsp">Register</a>
+                            <a href="index.jsp">Login</a>
                         </div>
                     </form>
                 </div>

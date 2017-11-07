@@ -5,6 +5,7 @@
  */
 
 import dao.PersonaDAO;
+import java.util.List;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -43,7 +44,9 @@ public class TestingPersonaDAO {
      public void hello() {
          PersonaDAO personita=new PersonaDAO();
          Persona personaProNuevoPablo=new Persona();
-         personaProNuevoPablo.setNombre("Marco");
-         personita.updateById(4, personaProNuevoPablo);
+         //System.out.println(personita.getPersonaByName("marco"));
+         //personaProNuevoPablo.setNombre("Marco");
+         //personita.updateById(4, personaProNuevoPablo);
+         //List<Persona> persona=personita.getPersonaByPhone("89");
      }
 }
