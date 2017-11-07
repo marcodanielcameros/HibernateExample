@@ -43,7 +43,7 @@ public class TestingPersonaDAO {
      public void hello() {
          PersonaDAO personita=new PersonaDAO();
          Persona personaProNuevoPablo=new Persona();
-         personaProNuevoPablo.setNombre("Ilich");
+         personaProNuevoPablo.setNombre("Marco");
          personita.updateById(4, personaProNuevoPablo);
      }
 }
