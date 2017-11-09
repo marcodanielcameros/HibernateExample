@@ -47,6 +47,6 @@ public class TestingPersonaDAO {
          //System.out.println(personita.getPersonaByName("marco"));
          //personaProNuevoPablo.setNombre("Marco");
          //personita.updateById(4, personaProNuevoPablo);
-         //List<Persona> persona=personita.getPersonaByPhone("89");
+         System.out.println(personita.getPersonaByPhone("111"));
      }
 }

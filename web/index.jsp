@@ -27,7 +27,7 @@
     </head>
     <body>
         <div class="container">
-            <div class="row main">
+            <div class="row main" id="idSuperGenial">
                 <div class="panel-heading">
                     <div class="panel-title text-center">
                         <h1 class="title">RIGORETO</h1>

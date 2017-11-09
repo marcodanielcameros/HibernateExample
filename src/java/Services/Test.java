@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.json.JSONObject;
 import pojo.Persona;
 import pojo.TipoPersona;
 
@@ -60,19 +61,24 @@ public class Test extends HttpServlet {
             int tipo=Integer.parseInt(request.getParameter("tipoPersona"));
             
             
+            JSONObject json=new JSONObject();
+            json.put("resultado", true);
+            response.setContentType("application/json utf-8");
+            PrintWriter out=response.getWriter();
+            out.print(json.toString());
+            
+            System.out.println(name);
+            System.out.println(paterno);
+            System.out.println(materno);
+            System.out.println(telefono);
+            System.out.println(tipo);
+            
             PersonaDAO personita=new PersonaDAO();
-            Persona personaNueva=new Persona();
-                
-                if(telefono!=personita.getPersonaByPhone(telefono).getTelefono()){
-                    System.out.println(personita.getPersonaByPhone(telefono).getTelefono());
-                    personita.savePersona(name, materno, paterno, telefono, tipo);
-
-
-                    response.sendRedirect("exito.jsp");
-                }
-                else{
-                    response.sendRedirect("index.jsp");
-                }
+            personita.savePersona(name, materno, paterno, telefono, tipo);
+            response.sendRedirect("parte.jsp");
+               
+                    
+            //destroy();
                 
             
             

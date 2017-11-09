@@ -81,15 +81,16 @@ public class Login extends HttpServlet {
             
             PersonaDAO personita=new PersonaDAO();
             Persona personaNueva=new Persona();
-            
-            if(telefono.equals(personita.getPersonaByPhone(telefono).getTelefono()) && name.equals(personita.getPersonaByPhone(telefono).getNombre())){
-                response.sendRedirect("exito.jsp");
-            }
-            else{
+            try{
+                if(telefono.equals(personita.getPersonaByPhone(telefono).getTelefono()) && name.equals(personita.getPersonaByPhone(telefono).getNombre())){
+                    response.sendRedirect("exito.jsp");
+                }
+                else{
+                    response.sendRedirect("index.jsp");
+                }
+            }catch(NullPointerException e){
                 response.sendRedirect("index.jsp");
             }
-            System.out.println(personita.getPersonaByPhone(telefono));
-            System.out.println("Help");
     }
 
     /**

@@ -41,7 +41,7 @@ public class PersonaDAO {
          */
         List<Persona> listaDePersonas=(List<Persona>)
                 session.createCriteria(Persona.class)
-                .add(Restrictions.eq("Nombre", nombre));
+                .add(Restrictions.eq("Nombre", nombre)).list();
         /**
          * Retorna la lista de personas.
          */
@@ -53,6 +53,22 @@ public class PersonaDAO {
          return (Persona)session.createCriteria(Persona.class)
                 .add(Restrictions.eq("Telefono", telefono)).uniqueResult();
          
+         
+                
+    }
+    
+    public  boolean isPhone(String telefono){
+        
+
+             
+         try{
+            Persona personita=(Persona)session.createCriteria(Persona.class)
+                .add(Restrictions.eq("Telefono", telefono)).uniqueResult();
+             
+            return true;
+         }catch(NullPointerException e){
+             return false;
+         }
          
                 
     }
